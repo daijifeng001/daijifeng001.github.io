@@ -1,0 +1,123 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link href="main.css" rel="stylesheet" media="all">
+<meta name="description" content="Break Ames Room Illusion: Depth from General Single Images" />
+<meta name="keywords" content="Single Image, Depth, Ames Room, CoC, Refocus">
+<!--
+<meta name="msvalidate.01" content="BF499F7308096080ECD26FCFFCEA47FD" />
+<meta name="google-site-verification" content="21kKbFxBFeevz2yaI7Nn40dIYxOaLukGDpHBZbzLyt0" />
+!-->
+<title>PASCAL-Scribble Dataset</title>
+<style type="text/css">
+.auto-style12 {
+	color: #1F82A9;
+}
+</style>
+</head>
+
+<body>
+</br></br>
+<h2 class="auto-style1">ScribbleSup: Scribble-Supervised Convolutional Networks for Semantic Segmentation</h2>
+<a href="http://andelin.github.io/">Di Lin</a><sup>1</sup>*&nbsp;&nbsp;&nbsp;&nbsp; 
+<a href="http://research.microsoft.com/en-us/people/jifdai/">Jifeng Dai</a><sup>2</sup>&nbsp;&nbsp;&nbsp;&nbsp; 
+<a href="http://www.cse.cuhk.edu.hk/~leojia/">Jiaya Jia</a><sup>1</sup>&nbsp;&nbsp;&nbsp;&nbsp; 
+<a href="http://research.microsoft.com/en-us/um/people/kahe/">Kaiming He</a><sup>2</sup>&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="http://research.microsoft.com/en-us/people/jiansun/">Jian Sun</a><sup>2</sup>&nbsp;&nbsp;&nbsp;&nbsp; 
+<p class="auto-style7"  align="center"><sup>1</sup>The Chinese Univeristy of Hong Kong&nbsp;&nbsp;&nbsp;&nbsp;<sup>2</sup>Microsoft Research</p>
+<p class="auto-style11"  align="center">(*This work was done when Di Lin was an intern at Microsoft Research)</p>
+
+
+<p class="style2"><strong><span class="auto-style6">Introduction</span></strong></p>
+<!--<p class="auto-style5">We provide scribble annotations on the PASCAL VOC 2012 set that involves 20 object categories and one
+background category, and the PASCAL-CONTEXT dataset that involves 59 categories of objects and stuff. We further annotate the
+PASCAL VOC 2007 set using the 59 categories (which include the 20 object categories).</p>-->
+<p class="auto-style5">
+Large-scale data is of crucial importance for learning semantic segmentation models, but annotating per-pixel masks 
+is a tedious and inefficient procedure. We note that for the topic of interactive image segmentation, scribbles are 
+very widely used in academic research and commercial software, and are recognized as one of the most user-friendly 
+ways of interacting. In this paper, we propose to use scribbles to annotate images, and develop an algorithm to train 
+convolutional networks for semantic segmentation supervised by scribbles. Our algorithm is based on a graphical model 
+that jointly propagates information from scribbles to unmarked pixels and learns network parameters. We present competitive 
+object semantic segmentation results on the PASCAL VOC dataset [1] by using scribbles as annotations. Scribbles are also favored 
+for annotating stuff (e.g., water, sky, grass) that has no well-defined shape, and our method shows excellent results on the 
+PASCAL-CONTEXT dataset [2] thanks to extra inexpensive scribble annotations.
+</p>
+
+<p class="style2"><strong><span class="auto-style6">PASCAL-Scribble Dataset</span></strong></p>
+<!--<p class="auto-style5">We provide scribble annotations on the PASCAL VOC 2012 set that involves 20 object categories and one
+background category, and the PASCAL-CONTEXT dataset that involves 59 categories of objects and stuff. We further annotate the 
+PASCAL VOC 2007 set using the 59 categories (which include the 20 object categories).</p>-->
+<p class="auto-style5">We provide scribble annotations on the PASCAL dataset [1]. Our annotations follow two 
+different protocols. In the first protocol, we annotate the PASCAL VOC 2012 set that involves 20 
+object categories (aeroplane, bicycle, ...) and one background category. There are 12,031 images annotated, 
+including 10,582 images in the training set and 1,449 images in the validation set. The following are 
+examples of annotated scribbles on the PASCAL VOC 2012 set.</p>
+<p align="center">
+<table style="width:840px" align="center">
+<tr>
+	<td><img width=800px alt="" src="Figures/scribble_example_12.jpg"></td>	
+</tr>
+</table>
+
+<p class="auto-style5">In the second protocol, we follow the 59 object/stuff categories and one background 
+category involved in the PASCAL-CONTEXT dataset [2]. Besides the 20 object categories in the first protocol, there are
+39 extra categories (snow, tree, ...) included. We follow this protocol to annotate the PASCAL-CONTEXT dataset. 
+We have 4,998 images in the training set annotated. The following are examples of annotated scribbles on the 
+PASCAL-CONTEXT dataset.</p>
+<p align="center">
+<table style="width:840px" align="center">
+<tr>
+	<td><img width=800px alt="" src="Figures/scribble_example_context.jpg"></td>	
+</tr>
+</table>
+
+<p class="auto-style5">Using the second protocol, we further annotate the 9,963 images in the PASCAL VOC 2007 set. 
+The following are examples of annotated scribbles on the PASCAL VOC 2007 set.</p>
+<p align="center">
+<table style="width:840px" align="center">
+<tr>
+	<td><img width=800px alt="" src="Figures/scribble_example_07.jpg"></td>	
+</tr>
+</table>
+
+<p class="auto-style5">&nbsp;</p>
+
+
+<p id="downloads", class="auto-style4"><strong>Downloads</strong></p>
+
+<table cellSpacing=4 cellPadding=2 border=0 style="width: 90%">
+<tr COLSPAN="2">
+<td align="center" valign="center">
+<!--<img style="padding:0; clear:both; " src="Figures/paper_thumbnail.png" align="middle" alt="Snapshot for paper" class="pdf" width="170" /></td>-->
+<td align="left" class="auto-style5">
+"ScribbleSup: Scribble-Supervised Convolutional Networks for Semantic Segmentation&quot;<br>
+Di Lin, Jifeng Dai, Jiaya Jia, Kaiming He, and Jian Sun<br>
+IEEE Conference on Computer Vision and Pattern Recognition (<b>CVPR</b>), 2016<br><br>
+<img alt="" height="32" src="Figures/pdf_icon.gif" width="31">&nbsp;&nbsp;
+[<a href="http://arxiv.org/abs/1604.05144">Paper</a>] <!--[<a href="./bibtex.html">BibTeX</a>]--><br>
+<img alt="" height="35" src="Figures/data_icon.png" width="35"> &nbsp;[<a href="https://www.dropbox.com/s/9vh3kvtd742red8/scribble_annotation.zip?dl=0">Scribble annotations</a>] <br>
+<p class="auto-style5">Please download the original images from the <a href="http://host.robots.ox.ac.uk/pascal/VOC/"><font color='blue'><b>PASCAL VOC website</b></font></a>.</p>
+</td>
+</tr>
+</table>
+<br>
+
+<p class="auto-style4" id=results><strong>Reference</strong></p>
+<p id="ref_1" class="auto-style5">
+	[1] M. Everingham, L. Van Gool, C. K. Williams, J. Winn, and A. Zisserman. The PASCAL Visual Object Classes (VOC)
+        Challenge. IJCV, 2010.</p>
+<p id="ref_2" class="auto-style5">
+	[2] R. Mottaghi, X. Chen, X. Liu, N.-G. Cho, S.-W. Lee, S. Fidler, R. Urtasun, and A. Yuille. The role of context 
+	    for object detection and semantic segmentation in the wild. In CVPR, 2014.</p>
+<p class="auto-style5">&nbsp;</p>
+
+
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+
+
+</body>
+
+</html>
